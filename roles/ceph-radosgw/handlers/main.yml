@@ -12,3 +12,36 @@
     state=restarted
     enabled=yes
   when: ansible_os_family == 'RedHat'
+
+- name: reload apache2
+  service: >
+    name=apache2
+    state=reloaded
+    enabled=yes
+  when: ansible_os_family == 'Debian'
+
+- name: reload apache2
+  service: >
+    name=httpd
+    state=reloaded
+    enabled=yes
+  when: ansible_os_family == 'RedHat'
+
+- name: restart nginx
+  service: name=nginx state=restarted enabled=yes
+
+- name: reload nginx
+  service: name=nginx state=reloaded enabled=yes
+
+- name: restart tengine
+  service: name=tengine state=restarted enabled=yes
+
+- name: reload tengine
+  service: name=tengine state=reloaded enabled=yes
+
+- name: restart radosgw
+  service: name=radosgw state=restarted enabled=yes
+
+- name: reload radosgw
+  service: name=radosgw state=reloaded enabled=yes
+

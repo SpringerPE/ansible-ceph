@@ -10,5 +10,15 @@ cephx: true
 http_100_continue: false
 
 # Rados Gateway options
-redhat_distro_ceph_extra: centos6.4 # supported distros are centos6.3, centos6.4, centos6, fedora18, fedora19, opensuse12.2, rhel6.3, rhel6.4, rhel6.5, rhel6, sles11sp2
+# supported distros are centos6.3, centos6.4, centos6, fedora18, fedora19, opensuse12.2, rhel6.3, rhel6.4, rhel6.5, rhel6, sles11sp2
+redhat_distro_ceph_extra: centos6.4
 email_address: foo@bar.com
+radosgw_socket: "/tmp/radosgw.sock"
+radosgw_server: "nginx" 
+radosgw_manage_nginx: true
+radosgw_ssl: false
+radosgw_ssl_manage_certs: true
+
+# subdomains used by radosgw. See http://ceph.com/docs/master/radosgw/config/#enabling-subdomain-s3-calls
+#radosgw_dns_name: your.subdomain.tld 
+
