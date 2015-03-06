@@ -27,5 +27,8 @@
 
 - hosts: rgws
   sudo: True
+  vars:
+    radosgw_server: "tengine"
+    radosgw_tengine_url: "http://artifactory.tools.springer-sbm.com/spr-deb-release-local/pool/tengine_2.0.2-1_amd64.deb"
   roles:
   - ceph-radosgw
